@@ -1,6 +1,6 @@
 //Maya ASCII 2023 scene
 //Name: Human_Rig.ma
-//Last modified: Thu, Sep 12, 2024 05:28:45 AM
+//Last modified: Thu, Sep 12, 2024 05:30:28 AM
 //Codeset: UTF-8
 requires "fbxmaya" "2020.3.1";
 file -rdi 1 -ns "Human_LowPoly" -rfn "Human_LowPolyRN" -op "fbx" -typ "FBX export"
@@ -17,11 +17,11 @@ fileInfo "product" "Maya 2023";
 fileInfo "version" "2023";
 fileInfo "cutIdentifier" "202205052215-234554116d";
 fileInfo "osv" "Mac OS X 10.16";
-fileInfo "UUID" "9EBFF608-FD49-6568-D7A7-339C614250F2";
+fileInfo "UUID" "75E24BAB-4542-795E-0148-44AA5B9EA31B";
 createNode transform -s -n "persp";
 	rename -uid "CE1221EE-BF4C-3176-8CD2-D98EFFCC0AFB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -296.10645593441814 920.83825531790569 2026.3596596938864 ;
+	setAttr ".t" -type "double3" -308.78817407809544 994.65460991923635 2253.1888065623543 ;
 	setAttr ".r" -type "double3" -18.000000000001993 -3.2000000000000934 -4.9773775952130075e-16 ;
 	setAttr ".rpt" -type "double3" -1.5988085044511555e-15 -1.9831673928040655e-14 -2.066453778434474e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
@@ -29,7 +29,7 @@ createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
 	setAttr ".ncp" 1;
-	setAttr ".coi" 1909.362652026864;
+	setAttr ".coi" 2148.2373933679742;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -7989,17 +7989,7 @@ createNode pointConstraint -n "L_Arm_01_IK_Jnt_pointConstraint1" -p "L_Arm_01_IK
 	setAttr ".rst" -type "double3" 85.260299682617188 606.70831298828125 -27.770200729370117 ;
 	setAttr -k on ".w0";
 createNode fosterParent -n "Human_LowPolyRNfosterParent1";
-	rename -uid "A73491CD-C846-2F04-13D4-D78FC4E96713";
-createNode mesh -n "Shoes_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
-	rename -uid "2E7A6F1B-5941-1864-E80A-BDBDE41B5F4F";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
-	setAttr ".cuvs" -type "string" "UVMap";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
+	rename -uid "6FA2628B-2F46-22F2-3931-D9AA36902E60";
 createNode mesh -n "Shoes_GeoShapeTag" -p "Human_LowPolyRNfosterParent1";
 	rename -uid "73B3FF20-8148-B590-FAED-AB830B19AFF9";
 	setAttr -k off ".v";
@@ -8011,6 +8001,28 @@ createNode mesh -n "Shoes_GeoShapeTag" -p "Human_LowPolyRNfosterParent1";
 	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
 	setAttr ".cuvs" -type "string" "UVMap";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "Shoes_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
+	rename -uid "2E7A6F1B-5941-1864-E80A-BDBDE41B5F4F";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "UVMap";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "Body_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
+	rename -uid "ECBAB152-CF40-8D48-B621-10906A6FA2F4";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
+	setAttr ".pv" -type "double2" 0.8196256160736084 0.84247463941574097 ;
+	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "UVMap";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".clst[0].clsn" -type "string" "Col";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 createNode mesh -n "Body_GeoShapeOrig" -p "Human_LowPolyRNfosterParent1";
@@ -43213,28 +43225,6 @@ createNode mesh -n "Body_GeoShapeOrig" -p "Human_LowPolyRNfosterParent1";
 	setAttr ".cvd" -type "dataPolyComponent" Index_Data Vertex 0 ;
 	setAttr ".pd[0]" -type "dataPolyComponent" Index_Data UV 0 ;
 	setAttr ".hfd" -type "dataPolyComponent" Index_Data Face 0 ;
-createNode mesh -n "Body_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
-	rename -uid "ECBAB152-CF40-8D48-B621-10906A6FA2F4";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".pv" -type "double2" 0.8196256160736084 0.84247463941574097 ;
-	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
-	setAttr ".cuvs" -type "string" "UVMap";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".clst[0].clsn" -type "string" "Col";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "Shirt_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
-	rename -uid "99469236-C044-3F20-9274-DA940ACE6E53";
-	setAttr -k off ".v";
-	setAttr ".vir" yes;
-	setAttr ".vif" yes;
-	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
-	setAttr ".cuvs" -type "string" "UVMap";
-	setAttr ".dcc" -type "string" "Ambient+Diffuse";
-	setAttr ".covm[0]"  0 1 1;
-	setAttr ".cdvm[0]"  0 1 1;
 createNode mesh -n "Shirt_GeoShapeTag" -p "Human_LowPolyRNfosterParent1";
 	rename -uid "3F56D206-C74A-488C-A371-0CBCB03B597D";
 	setAttr -k off ".v";
@@ -43255,8 +43245,8 @@ createNode mesh -n "Shirt_GeoShapeTag" -p "Human_LowPolyRNfosterParent1";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
-createNode mesh -n "Pants_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
-	rename -uid "022529E5-5147-E06F-74AC-5797B5127374";
+createNode mesh -n "Shirt_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
+	rename -uid "99469236-C044-3F20-9274-DA940ACE6E53";
 	setAttr -k off ".v";
 	setAttr ".vir" yes;
 	setAttr ".vif" yes;
@@ -43276,6 +43266,16 @@ createNode mesh -n "Pants_GeoShapeTag" -p "Human_LowPolyRNfosterParent1";
 	setAttr ".gtag[0].gtagcmp" -type "componentList" 20 "e[7]" "e[11]" "e[20]" "e[204]" "e[208]" "e[211]" "e[217]" "e[436]" "e[440]" "e[443]" "e[606]" "e[609]" "e[613]" "e[766]" "e[918]" "e[922]" "e[925]" "e[931]" "e[1068]" "e[1077]";
 	setAttr ".gtag[1].gtagnm" -type "string" "cluster26";
 	setAttr ".gtag[1].gtagcmp" -type "componentList" 19 "e[84]" "e[88]" "e[91]" "e[97]" "e[316]" "e[320]" "e[323]" "e[329]" "e[516]" "e[519]" "e[523]" "e[693]" "e[697]" "e[704]" "e[827]" "e[830]" "e[834]" "e[994:995]" "e[1109]";
+	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
+	setAttr ".cuvs" -type "string" "UVMap";
+	setAttr ".dcc" -type "string" "Ambient+Diffuse";
+	setAttr ".covm[0]"  0 1 1;
+	setAttr ".cdvm[0]"  0 1 1;
+createNode mesh -n "Pants_GeoShapeDeformed" -p "Human_LowPolyRNfosterParent1";
+	rename -uid "022529E5-5147-E06F-74AC-5797B5127374";
+	setAttr -k off ".v";
+	setAttr ".vir" yes;
+	setAttr ".vif" yes;
 	setAttr ".uvst[0].uvsn" -type "string" "UVMap";
 	setAttr ".cuvs" -type "string" "UVMap";
 	setAttr ".dcc" -type "string" "Ambient+Diffuse";
@@ -43390,21 +43390,21 @@ createNode reference -n "Human_LowPolyRN";
 		0 "|Human_LowPoly:Eyes_Geo" "|Man|Geometry" "-s -r "
 		0 "|Human_LowPoly:Hair_Geo" "|Man|Geometry" "-s -r "
 		0 "|Human_LowPoly:Shoes_Geo" "|Man|Geometry" "-s -r "
-		0 "|Human_LowPolyRNfosterParent1|Pants_GeoShapeTag" "|Man|Geometry|Human_LowPoly:Pants_Geo" 
-		"-s -r "
 		0 "|Human_LowPolyRNfosterParent1|Pants_GeoShapeDeformed" "|Man|Geometry|Human_LowPoly:Pants_Geo" 
 		"-s -r "
-		0 "|Human_LowPolyRNfosterParent1|Shirt_GeoShapeTag" "|Man|Geometry|Human_LowPoly:Shirt_Geo" 
+		0 "|Human_LowPolyRNfosterParent1|Pants_GeoShapeTag" "|Man|Geometry|Human_LowPoly:Pants_Geo" 
 		"-s -r "
 		0 "|Human_LowPolyRNfosterParent1|Shirt_GeoShapeDeformed" "|Man|Geometry|Human_LowPoly:Shirt_Geo" 
 		"-s -r "
-		0 "|Human_LowPolyRNfosterParent1|Body_GeoShapeDeformed" "|Man|Geometry|Human_LowPoly:Body_Geo" 
+		0 "|Human_LowPolyRNfosterParent1|Shirt_GeoShapeTag" "|Man|Geometry|Human_LowPoly:Shirt_Geo" 
 		"-s -r "
 		0 "|Human_LowPolyRNfosterParent1|Body_GeoShapeOrig" "|Man|Geometry|Human_LowPoly:Body_Geo" 
 		"-s -r "
-		0 "|Human_LowPolyRNfosterParent1|Shoes_GeoShapeTag" "|Man|Geometry|Human_LowPoly:Shoes_Geo" 
+		0 "|Human_LowPolyRNfosterParent1|Body_GeoShapeDeformed" "|Man|Geometry|Human_LowPoly:Body_Geo" 
 		"-s -r "
 		0 "|Human_LowPolyRNfosterParent1|Shoes_GeoShapeDeformed" "|Man|Geometry|Human_LowPoly:Shoes_Geo" 
+		"-s -r "
+		0 "|Human_LowPolyRNfosterParent1|Shoes_GeoShapeTag" "|Man|Geometry|Human_LowPoly:Shoes_Geo" 
 		"-s -r "
 		2 "|Man|Geometry|Human_LowPoly:Pants_Geo|Human_LowPoly:Pants_GeoShape" "intermediateObject" 
 		" 1"
